@@ -4,9 +4,22 @@ from nonebot.params import CommandArg
 from nonebot.plugin import on_command
 
 __zx_plugin_name__ = "幻影"
-__plugin_usage__ = "用法： 无"
+__plugin_usage__ = """
+usage：
+    幻影群指令
+    指令：
+        下载/cdlinux/kali/破解
+""".strip()
+__plugin_des__ = "幻影群指令"
+__plugin_cmd__ = ["下载/cdlinux/kali/破解"]
 __plugin_version__ = 0.1
 __plugin_author__ = 'Shouzi'
+__plugin_settings__ = {
+    "level": 5,
+    "default_status": True,
+    "limit_superuser": False,
+    "cmd": ["下载", "cdlinux", "破解","kali" ],
+}
 
 download = on_command("下载", block=True,aliases={"下载", "官网"},priority=5)
 
